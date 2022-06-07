@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.0.3/aframe.min.js"></script>
+    <script src="https://libs.zappar.com/zappar-aframe/0.2.4/zappar-aframe.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&display=swap" rel="stylesheet"> 
+    <meta charset="utf-8" />
+    <title>Your Inner Chengyu</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+      }
+      .pullup {
+        margin-top: -100px !important;
+      }
+    </style>
+  </head>
+  <body>
+    <a-scene>
+      <a-camera
+        zappar-camera="user-facing: true;"
+      /><!-- Setup our face tracker -->
+      <a-entity zappar-face id="my-face-tracker">
+        <a-image src="./assets/images/main-qimg-4833d2d626ec99f5da661dd633c0a002.png" position="0 0 4" width="2"></a-image>
+        <!-- <a-entity text="align: center; font: https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&display=swap; value: 不可得兼;" position="0 0 0"></a-entity>
+        <a-text value="ABCあいうえお日本語" font="custom-msdf.json" font-image="custom-msdf.png" negate="false" scale="2 2 1" position="-2 2 -4"></a-text> -->
+     </a-entity>
+    </a-scene>
+  </body>
+</html>
