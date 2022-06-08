@@ -19,20 +19,75 @@
       }
 
       .btn {
+        padding: 16px;
+        width: 50%;
+        border: none;
+        outline: none;
+        color: rgb(255, 255, 255);
+        background: #111;
+        cursor: pointer;
         position: absolute;
         bottom: 5vh;
         left: 50%;
-        width: 50%;
-        text-align: center;
         transform: translateX(-50%);
-        padding: 24px;
-        font-size: 18px;
-        font-family: sans-serif;
+        z-index: 99;
+        border-radius: 10px;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
         text-transform: uppercase;
-        border-radius: 4px;
-        background-color: aquamarine;
-        color: #212121;
-        z-index: 999;
+      }
+
+      .btn:before {
+        content: "";
+        background: linear-gradient(
+          45deg,
+          #ff0000,
+          #ff7300,
+          #fffb00,
+          #48ff00,
+          #00ffd5,
+          #002bff,
+          #7a00ff,
+          #ff00c8,
+          #ff0000
+        );
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        background-size: 400%;
+        z-index: -1;
+        filter: blur(5px);
+        -webkit-filter: blur(5px);
+        width: calc(100% + 4px);
+        height: calc(100% + 4px);
+        animation: glowing-btn 20s linear infinite;
+        transition: opacity 0.3s ease-in-out;
+        border-radius: 10px;
+      }
+
+      @keyframes glowing-btn {
+        0% {
+          background-position: 0 0;
+        }
+        50% {
+          background-position: 400% 0;
+        }
+        100% {
+          background-position: 0 0;
+        }
+      }
+
+      .btn:after {
+        z-index: -1;
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: #222;
+        left: 0;
+        top: 0;
+        border-radius: 10px;
       }
     </style>
   </head>
@@ -42,19 +97,28 @@
         zappar-camera="user-facing: true;"
       /><!-- Setup our face tracker -->
       <a-entity zappar-face id="my-face-tracker">
-        <a-image src="./assets/images/questch.png" position="0 0.75 0" width="1" height="0.5"></a-image>
-     </a-entity>
-     <button class="btn" onclick="handleImage()">reveal your inner Chengyu</button>
+        <a-image
+          src="./assets/images/questch.png"
+          position="0 0.75 0"
+          width="1"
+          height="0.5"
+        ></a-image>
+      </a-entity>
+      <button class="btn" onclick="handleImage()">
+       tap to reveal your inner Chengyu
+      </button>
     </a-scene>
   </body>
 
   <script>
-    const entityEl = document.querySelector('a-image')
-    const button = document.getElementsByClassName('btn')
+    const entityEl = document.querySelector("a-image");
+    const button = document.getElementsByClassName("btn");
 
     function handleImage() {
-      entityEl.setAttribute('src', './assets/images/main-qimg-4833d2d626ec99f5da661dd633c0a002.png')
+      entityEl.setAttribute(
+        "src",
+        "./assets/images/main-qimg-4833d2d626ec99f5da661dd633c0a002.png"
+      );
     }
-
   </script>
 </html>
