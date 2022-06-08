@@ -14,11 +14,15 @@
         height: 100%;
       }
 
+      div {
+        display: none;
+      }
+
       .btn {
         position: absolute;
         bottom: 5vh;
         left: 50%;
-        width: 90%;
+        width: 50%;
         text-align: center;
         transform: translateX(-50%);
         padding: 24px;
@@ -40,7 +44,7 @@
       <a-entity zappar-face id="my-face-tracker">
         <a-image src="./assets/images/questch.png" position="0 0.75 0" width="1" height="0.5"></a-image>
      </a-entity>
-     <div class="btn" onclick="handleImage()">reveal your inner Chengyu</div>
+     <button class="btn" onclick="handleImage()">reveal your inner Chengyu</button>
     </a-scene>
   </body>
 
