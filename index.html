@@ -13,6 +13,23 @@
         width: 100%;
         height: 100%;
       }
+
+      .btn {
+        position: absolute;
+        bottom: 5vh;
+        left: 50%;
+        width: 90%;
+        text-align: center;
+        transform: translateX(-50%);
+        padding: 24px;
+        font-size: 18px;
+        font-family: sans-serif;
+        text-transform: uppercase;
+        border-radius: 4px;
+        background-color: aquamarine;
+        color: #212121;
+        z-index: 999;
+      }
     </style>
   </head>
   <body>
@@ -21,8 +38,19 @@
         zappar-camera="user-facing: true;"
       /><!-- Setup our face tracker -->
       <a-entity zappar-face id="my-face-tracker">
-        <a-image src="./assets/images/main-qimg-4833d2d626ec99f5da661dd633c0a002.png" position="0 0.75 0" width="0.3" height="0.2"></a-image>
+        <a-image src="./assets/images/questch.png" position="0 0.75 0" width="1" height="0.5"></a-image>
      </a-entity>
+     <div class="btn" onclick="handleImage()">reveal your inner Chengyu</div>
     </a-scene>
   </body>
+
+  <script>
+    const entityEl = document.querySelector('a-image')
+    const button = document.getElementsByClassName('btn')
+
+    function handleImage() {
+      entityEl.setAttribute('src', './assets/images/main-qimg-4833d2d626ec99f5da661dd633c0a002.png')
+    }
+
+  </script>
 </html>
