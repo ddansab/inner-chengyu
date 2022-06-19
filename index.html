@@ -3,97 +3,20 @@
   <head>
     <script src="https://aframe.io/releases/1.0.3/aframe.min.js"></script>
     <script src="https://libs.zappar.com/zappar-aframe/0.2.4/zappar-aframe.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;600&display=swap" rel="stylesheet"> 
     <!-- <script src="https://rawgit.com/mayognaise/aframe-gif-shader/master/dist/aframe-gif-shader.min.js"></script> -->
+    <link rel="stylesheet" href="./assets/styles.css" />
     <meta charset="utf-8" />
     <title>Your Inner Chengyu</title>
-    <style>
-      html,
-      body {
-        margin: 0;
-        padding: 0;
-        width: 100%;
-        height: 100%;
-      }
-
-      div {
-        display: none;
-      }
-
-      .btn {
-        padding: 16px;
-        width: 50%;
-        border: none;
-        outline: none;
-        color: rgb(255, 255, 255);
-        background: #111;
-        cursor: pointer;
-        position: absolute;
-        bottom: 5vh;
-        left: 50%;
-        transform: translateX(-50%);
-        z-index: 99;
-        border-radius: 10px;
-        user-select: none;
-        -webkit-user-select: none;
-        touch-action: manipulation;
-        text-transform: uppercase;
-      }
-
-      .btn:before {
-        content: "";
-        background: linear-gradient(
-          45deg,
-          #ff0000,
-          #ff7300,
-          #fffb00,
-          #48ff00,
-          #00ffd5,
-          #002bff,
-          #7a00ff,
-          #ff00c8,
-          #ff0000
-        );
-        position: absolute;
-        top: -2px;
-        left: -2px;
-        background-size: 400%;
-        z-index: -1;
-        filter: blur(5px);
-        -webkit-filter: blur(5px);
-        width: calc(100% + 4px);
-        height: calc(100% + 4px);
-        animation: glowing-btn 20s linear infinite;
-        transition: opacity 0.3s ease-in-out;
-        border-radius: 10px;
-      }
-
-      @keyframes glowing-btn {
-        0% {
-          background-position: 0 0;
-        }
-        50% {
-          background-position: 400% 0;
-        }
-        100% {
-          background-position: 0 0;
-        }
-      }
-
-      .btn:after {
-        z-index: -1;
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background: #222;
-        left: 0;
-        top: 0;
-        border-radius: 10px;
-      }
-      .hide {
-        display: none;
-      }
-    </style>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="./assets/scripts.js"></script>
   </head>
   <body>
     <a-scene>
@@ -106,6 +29,7 @@
           material="shader:gif;src:url('/assets/images/7roG.gif');"
         ></a-entity> -->
         <a-image
+          id="img"
           class="box"
           src="./assets/images/questch.png"
           position="0 0.75 0"
@@ -114,75 +38,14 @@
         ></a-image>
       </a-entity>
 
-      <button id="btn1" class="btn" onclick="handleImage()">
-        tap to reveal your inner Chengyu
-      </button>
-      <button id="btn2" class="btn hide" onclick="handleMeaning()">
-        what that mean??
-      </button>
+      <button id="btn1" class="btn">tap to reveal your inner Chengyu</button>
+      <button id="btn2" class="btn hide">what that mean??</button>
+
+      <div id="wtm-modal" class="card card-2">
+        <h3 id="pinyin"></h3>
+        <p id="wtm-text"></p>
+        <span id="close" style="font-weight: bold;">X</span>
+      </div>
     </a-scene>
   </body>
-
-  <script>
-    const entityEl = document.querySelector("a-image");
-    const button1 = document.getElementById("btn1");
-    const button2 = document.getElementById("btn2")
-    const btnTxt = button1.innerText
-
-    CHENGYU = [
-      {
-        src: "./assets/images/cy1.png",
-        pinyin: "bù kě dé jiān",
-        wtm: "You can't have both at the same time.",
-      },
-      {
-        src: "./assets/images/cy2.png",
-        pinyin: "dà zhì ruò yú",
-        wtm: "The wise one appears stupid.",
-      },
-      {
-        src: "./assets/images/cy3.png",
-        pinyin: "zhī zú cháng lè",
-        wtm: "To be content with what you have.",
-      },
-      {
-        src: "./assets/images/cy4.png",
-        pinyin: "bù gù yī qiè",
-        wtm: "Indifferent to everything.",
-      },
-      {
-        src: "./assets/images/cy5.png",
-        pinyin: "hòu dé zài wù",
-        wtm: "To be of strong moral character.",
-      },
-      {
-        src: "./assets/images/cy6.png",
-        pinyin: "suí yù ér'ān",
-        wtm: "To feel adequate wherever you are.",
-      },
-      {
-        src: "./assets/images/main-qimg-4833d2d626ec99f5da661dd633c0a002.png",
-        pinyin: "mǎ mǎ hǔ hǔ",
-        wtm: "Horse horse tiger tiger, obvi.",
-      },
-    ];
-
-    const num = Math.floor((Math.random() * CHENGYU.length));
-    let cy = CHENGYU[num]
-
-    function handleImage() {
-      entityEl.setAttribute("src", `${cy.src}`);
-
-      if (btnTxt === "TAP TO REVEAL YOUR INNER CHENGYU") {
-        button1.classList.add("hide")
-        button2.classList.remove("hide")
-      } 
-    
-      console.log(num)
-    }
-
-    function handleMeaning() {
-      alert(`${cy.pinyin}\n${cy.wtm}`)
-    }
-  </script>
 </html>
