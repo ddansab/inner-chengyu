@@ -7,12 +7,8 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
-div {
-  display: none;
-}
-
 div:last-of-type {
-  display: block;
+  display: none;
 }
 
 .btn {
