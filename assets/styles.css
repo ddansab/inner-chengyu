@@ -101,7 +101,7 @@ div:last-of-type {
   transform: translate(-50%, -50%);
   z-index: 100;
   text-align: center;
-  padding: 32px 16px 56px;
+  padding: 32px 16px 72px;
 }
 
 .card {
