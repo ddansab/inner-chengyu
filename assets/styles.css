@@ -27,6 +27,7 @@ div:last-of-type {
   font-weight: 600;
   position: relative;
   bottom: -24px;
+  text-decoration: none;
 }
 
 .btn-abs {

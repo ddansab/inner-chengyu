@@ -1,46 +1,64 @@
 $(document).ready(function () {
   const CHENG = [
     {
-      src: "./assets/images/cy1.png",
+      src: "cy1.png",
       pinyin: "bá miáo zhù zhǎng",
       wtm: "To pull seedlings [out of the ground] to help them grow.",
-      more: "https://laowaichengyuguide.com/entry/拔苗助长"
+      more: "拔苗助长",
     },
     {
-      src: "./assets/images/cy2.png",
+      src: "cy2.png",
       pinyin: "bān mén nòng fǔ",
       wtm: "To show off with an axe to 鲁班 (Lǔ Bān).",
-      more: "https://laowaichengyuguide.com/entry/班门弄斧"
+      more: "班门弄斧",
     },
     {
-      src: "./assets/images/cy3.png",
+      src: "cy3.png",
       pinyin: "běn mò dào zhì",
       wtm: "To invert tree roots and tree branches.",
-      more: "https://laowaichengyuguide.com/entry/本末倒置"
+      more: "本末倒置",
     },
     {
-      src: "./assets/images/cy4.png",
+      src: "cy4.png",
       pinyin: "chū ěr fǎn ěr",
       wtm: "What comes from you returns to you.",
-      more: "https://laowaichengyuguide.com/entry/出尔反尔"
+      more: "出尔反尔",
     },
     {
-      src: "./assets/images/cy5.png",
+      src: "cy5.png",
       pinyin: "cǎo mù jiē bīng",
       wtm: "The plants and trees are all [enemy] soldiers.",
-      more: "https://laowaichengyuguide.com/entry/草木皆兵"
+      more: "草木皆兵",
     },
     {
-      src: "./assets/images/cy6.png",
+      src: "cy6.png",
       pinyin: "dà qì wǎn chéng",
       wtm: "Precious objects take a long time to make.",
-      more: "https://laowaichengyuguide.com/entry/大器晚成"
+      more: "大器晚成",
     },
     {
-      src: "./assets/images/main-qimg-4833d2d626ec99f5da661dd633c0a002.png",
+      src: "main-qimg-4833d2d626ec99f5da661dd633c0a002.png",
       pinyin: "mǎ mǎ hǔ hǔ",
       wtm: "Horse horse tiger tiger, obvi.",
-      more: "https://laowaichengyuguide.com/entry/马马虎虎"
+      more: "马马虎虎",
+    },
+    {
+      src: "cy7.png",
+      pinyin: "dōng shān zài qǐ",
+      wtm: "To return to office after living in Dong Shan.",
+      more: "东山再起",
+    },
+    {
+      src: "cy8.png",
+      pinyin: "fù shuǐ nán shōu",
+      wtm: "Spilt water is difficult to retrieve.",
+      more: "覆水难收",
+    },
+    {
+      src: "cy9.png",
+      pinyin: "fēi é pū huǒ",
+      wtm: "A moth flying itself into flames.",
+      more: "飞蛾扑火",
     },
   ];
 
@@ -52,7 +70,7 @@ $(document).ready(function () {
     e.preventDefault();
 
     if ($(this).text("TAP TO REVEAL YOUR INNER CHENGYU")) {
-      $("#img").attr("src", cy.src);
+      $("#img").attr("src", `./assets/images/${cy.src}`);
       $(this).hide();
       $("#btn2").show();
     }
@@ -60,7 +78,6 @@ $(document).ready(function () {
 
   // handle modal
   $("#wtm-modal").hide();
-  
 
   $("#close").click(function (e) {
     e.preventDefault();
@@ -72,7 +89,7 @@ $(document).ready(function () {
     e.preventDefault();
     $("#pinyin").text(cy.pinyin);
     $("#wtm-text").text(cy.wtm);
-    $('#learnmore').attr("href", cy.more);
+    $("#learnmore").attr("href", `https://laowaichengyuguide.com/entry/${cy.more}`);
     $("#wtm-modal").slideDown();
   });
 });
