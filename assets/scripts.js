@@ -2,21 +2,21 @@ $(document).ready(function () {
   const CHENG = [
     {
       src: "./assets/images/cy1.png",
-      pinyin: "bù kě dé jiān",
-      wtm: "You can't have both at the same time.",
-      more: ""
+      pinyin: "bá miáo zhù zhǎng",
+      wtm: "To pull seedlings [out of the ground] to help them grow.",
+      more: "https://laowaichengyuguide.com/entry/拔苗助长"
     },
     {
       src: "./assets/images/cy2.png",
-      pinyin: "dà zhì ruò yú",
-      wtm: "The wise one appears stupid.",
-      more: ""
+      pinyin: "bān mén nòng fǔ",
+      wtm: "To show off with an axe to 鲁班 (Lǔ Bān).",
+      more: "https://laowaichengyuguide.com/entry/班门弄斧"
     },
     {
       src: "./assets/images/cy3.png",
-      pinyin: "zhī zú cháng lè",
-      wtm: "To be content with what you have.",
-      more: ""
+      pinyin: "běn mò dào zhì",
+      wtm: "To invert tree roots and tree branches.",
+      more: "https://laowaichengyuguide.com/entry/本末倒置"
     },
     {
       src: "./assets/images/cy4.png",
@@ -40,7 +40,7 @@ $(document).ready(function () {
       src: "./assets/images/main-qimg-4833d2d626ec99f5da661dd633c0a002.png",
       pinyin: "mǎ mǎ hǔ hǔ",
       wtm: "Horse horse tiger tiger, obvi.",
-      more: "https://laowaichengyuguide.com/entry/m%C7%8E%20m%C7%8E%20h%C7%94%20h%C7%94"
+      more: "https://laowaichengyuguide.com/entry/马马虎虎"
     },
   ];
 
