@@ -60,6 +60,18 @@ $(document).ready(function () {
       wtm: "A moth flying itself into flames.",
       more: "飞蛾扑火",
     },
+    {
+      src: "cy10.png",
+      pinyin: "hè lì jī qún",
+      wtm: "A crane standing in a flock of chicken.",
+      more: "鹤立鸡群",
+    },
+    {
+      src: "cy11.png",
+      pinyin: "hài qún zhī mǎ",
+      wtm: "The horse that harms the herd.",
+      more: "害群之马",
+    },
   ];
 
   const NUM = Math.floor(Math.random() * CHENG.length);
@@ -87,6 +99,8 @@ $(document).ready(function () {
   // handle button message and meaning
   $("#btn2").click(function (e) {
     e.preventDefault();
+
+    $('#char').text(cy.more);
     $("#pinyin").text(cy.pinyin);
     $("#wtm-text").text(cy.wtm);
     $("#learnmore").attr("href", `https://laowaichengyuguide.com/entry/${cy.more}`);

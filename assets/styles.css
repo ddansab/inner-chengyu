@@ -16,7 +16,7 @@ div:last-of-type {
   border: none;
   outline: none;
   color: rgb(255, 255, 255);
-  background: #111;
+  background: #C8102E;
   cursor: pointer;
   z-index: 99;
   border-radius: 10px;
@@ -128,3 +128,9 @@ div:last-of-type {
   cursor: pointer;
 }
 
+#char {
+  font-size: 32px;
+  color: #C8102E;
+  text-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+
+}

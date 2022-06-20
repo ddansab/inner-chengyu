@@ -1,37 +1,62 @@
 [
   {
-    "src": "./assets/images/cy1.png",
-    "pinyin": "bù kě dé jiān",
-    "wtm": "You can't have both at the same time."
+    "src": "cy1.png",
+    "pinyin": "bá miáo zhù zhǎng",
+    "wtm": "To pull seedlings [out of the ground] to help them grow.",
+    "more": "拔苗助长"
   },
   {
-    "src": "./assets/images/cy2.png",
-    "pinyin": "dà zhì ruò yú",
-    "wtm": "The wise one appears stupid."
+    "src": "cy2.png",
+    "pinyin": "bān mén nòng fǔ",
+    "wtm": "To show off with an axe to 鲁班 (Lǔ Bān).",
+    "more": "班门弄斧"
   },
   {
-    "src": "./assets/images/cy3.png",
-    "pinyin": "zhī zú cháng lè",
-    "wtm": "To be content with what you have."
+    "src": "cy3.png",
+    "pinyin": "běn mò dào zhì",
+    "wtm": "To invert tree roots and tree branches.",
+    "more": "本末倒置"
   },
   {
-    "src": "./assets/images/cy4.png",
-    "pinyin": "bù gù yī qiè",
-    "wtm": "Indifferent to everything."
+    "src": "cy4.png",
+    "pinyin": "chū ěr fǎn ěr",
+    "wtm": "What comes from you returns to you.",
+    "more": "出尔反尔"
   },
   {
-    "src": "./assets/images/cy5.png",
-    "pinyin": "hòu dé zài wù",
-    "wtm": "To be of strong moral character."
+    "src": "cy5.png",
+    "pinyin": "cǎo mù jiē bīng",
+    "wtm": "The plants and trees are all [enemy] soldiers.",
+    "more": "草木皆兵"
   },
   {
-    "src": "./assets/images/cy6.png",
-    "pinyin": "suí yù ér'ān",
-    "wtm": "To feel adequate wherever you are."
+    "src": "cy6.png",
+    "pinyin": "dà qì wǎn chéng",
+    "wtm": "Precious objects take a long time to make.",
+    "more": "大器晚成"
   },
   {
-    "src": "./assets/images/main-qimg-4833d2d626ec99f5da661dd633c0a002.png",
+    "src": "main-qimg-4833d2d626ec99f5da661dd633c0a002.png",
     "pinyin": "mǎ mǎ hǔ hǔ",
-    "wtm": "Horse horse tiger tiger, obvi."
+    "wtm": "Horse horse tiger tiger, obvi.",
+    "more": "马马虎虎"
+  },
+  {
+    "src": "cy7.png",
+    "pinyin": "dōng shān zài qǐ",
+    "wtm": "To return to office after living in Dong Shan.",
+    "more": "东山再起"
+  },
+  {
+    "src": "cy8.png",
+    "pinyin": "fù shuǐ nán shōu",
+    "wtm": "Spilt water is difficult to retrieve.",
+    "more": "覆水难收"
+  },
+  {
+    "src": "cy9.png",
+    "pinyin": "fēi é pū huǒ",
+    "wtm": "A moth flying itself into flames.",
+    "more": "飞蛾扑火"
   }
 ]
