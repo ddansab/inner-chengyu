@@ -72,7 +72,7 @@ $(document).ready(function () {
     e.preventDefault();
     $("#pinyin").text(cy.pinyin);
     $("#wtm-text").text(cy.wtm);
-    $('#learnmore').attr("src", cy.more);
+    $('#learnmore').attr("href", cy.more);
     $("#wtm-modal").slideDown();
   });
 });
