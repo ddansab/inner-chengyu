@@ -20,21 +20,21 @@ $(document).ready(function () {
     },
     {
       src: "./assets/images/cy4.png",
-      pinyin: "bù gù yī qiè",
-      wtm: "Indifferent to everything.",
-      more: ""
+      pinyin: "chū ěr fǎn ěr",
+      wtm: "What comes from you returns to you.",
+      more: "https://laowaichengyuguide.com/entry/出尔反尔"
     },
     {
       src: "./assets/images/cy5.png",
-      pinyin: "hòu dé zài wù",
-      wtm: "To be of strong moral character.",
-      more: ""
+      pinyin: "cǎo mù jiē bīng",
+      wtm: "The plants and trees are all [enemy] soldiers.",
+      more: "https://laowaichengyuguide.com/entry/草木皆兵"
     },
     {
       src: "./assets/images/cy6.png",
-      pinyin: "suí yù ér'ān",
-      wtm: "To feel adequate wherever you are.",
-      more: ""
+      pinyin: "dà qì wǎn chéng",
+      wtm: "Precious objects take a long time to make.",
+      more: "https://laowaichengyuguide.com/entry/大器晚成"
     },
     {
       src: "./assets/images/main-qimg-4833d2d626ec99f5da661dd633c0a002.png",
