@@ -72,6 +72,24 @@ $(document).ready(function () {
       wtm: "The horse that harms the herd.",
       more: "害群之马",
     },
+    {
+      src: "cy12.png",
+      pinyin: "rú yú dé shuǐ",
+      wtm: "Like a fish in water.",
+      more: "如鱼得水",
+    },
+    {
+      src: "cy13.png",
+      pinyin: "shuǐ dī shí chuān",
+      wtm: "Dripping water penetrates stone.",
+      more: "水滴石穿",
+    },
+    {
+      src: "cy14.png",
+      pinyin: "tóu bǐ cóng róng",
+      wtm: "Lay down the pen and pick up the sword.",
+      more: "投笔从戎",
+    },
   ];
 
   const NUM = Math.floor(Math.random() * CHENG.length);
